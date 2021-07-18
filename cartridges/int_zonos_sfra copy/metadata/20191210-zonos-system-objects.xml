@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="zonosMessage">
+                <display-name xml:lang="x-default">Zonos Message</display-name>
+                <description xml:lang="x-default">A custom message to be displayed to the user explaining duties and taxes relating to their order.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="zonosLandedCostId">
+                <display-name xml:lang="x-default">Zonos Landed Cost Id</display-name>
+                <description xml:lang="x-default">The unique id from the landed cost api call.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Zonos">
+                <display-name xml:lang="x-default">Zonos</display-name>
+                <attribute attribute-id="zonosMessage"/>
+                <attribute attribute-id="zonosLandedCostId"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="zonosLandedCostId">
+                <display-name xml:lang="x-default">Zonos Landed Cost Id</display-name>
+                <description xml:lang="x-default">The unique id from the landed cost api call.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Zonos">
+                <display-name xml:lang="x-default">Zonos</display-name>
+                <attribute attribute-id="zonosLandedCostId"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="dimDepth">
+                <display-name xml:lang="x-default">Depth</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>true</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dimHeight">
+                <display-name xml:lang="x-default">Height</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>true</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dimUnit">
+                <display-name xml:lang="x-default">Unit</display-name>
+                <description xml:lang="x-default">Unit of measure used for Height, Width, etc.</description>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">inch</display>
+                        <value>inch</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">centimeter</display>
+                        <value>centimeter</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">millimeter</display>
+                        <value>millimeter</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="dimWeight">
+                <display-name xml:lang="x-default">Weight</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>true</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="dimWeightUnit">
+                <display-name xml:lang="x-default">Weight Unit</display-name>
+                <description xml:lang="x-default">Unit of measurement for the Weight attribute</description>
+                <type>enum-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">pound</display>
+                        <value>pound</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">ounce</display>
+                        <value>ounce</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">kilogram</display>
+                        <value>kilogram</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="dimWidth">
+                <display-name xml:lang="x-default">Width</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>true</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="hs_code">
+                <display-name xml:lang="x-default">HS Code</display-name>
+                <description xml:lang="x-default">HS Code</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="zonos_api">
+                <display-name xml:lang="x-default">Zonos API</display-name>
+                <attribute attribute-id="dimWidth"/>
+                <attribute attribute-id="dimHeight"/>
+                <attribute attribute-id="dimDepth"/>
+                <attribute attribute-id="dimUnit"/>
+                <attribute attribute-id="dimWeight"/>
+                <attribute attribute-id="dimWeightUnit"/>
+                <attribute attribute-id="hs_code"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="ShippingMethod">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="carrier">
+                <display-name xml:lang="x-default">Carrier</display-name>
+                <description xml:lang="x-default">The carrier for this shipping method.</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="isDdp">
+                <display-name xml:lang="x-default">Is DDP</display-name>
+                <description xml:lang="x-default">Specifies whether this shipping method/carrier supports DDP.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="serviceLevel">
+                <display-name xml:lang="x-default">Service Level</display-name>
+                <description xml:lang="x-default">Service Level</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="zonos">
+                <display-name xml:lang="x-default">Zonos Attributes</display-name>
+                <attribute attribute-id="carrier"/>
+                <attribute attribute-id="serviceLevel"/>
+                <attribute attribute-id="isDdp"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="zonos_enabled">
+                <display-name xml:lang="x-default">Zonos Enabled</display-name>
+                <description xml:lang="x-default">Flag to indicate whether or not Zonos cartridge is enabled or not.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="zonos_secret">
+                <display-name xml:lang="x-default">Zonos Secret</display-name>
+                <description xml:lang="x-default">Secret key used when calling Zonos Order Complete API</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="zonos_sitekey">
+                <display-name xml:lang="x-default">Zonos Site Key</display-name>
+                <description xml:lang="x-default">Key used by Hello JS script.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="zonos_storeId">
+                <display-name xml:lang="x-default">Zonos Store Id</display-name>
+                <description xml:lang="x-default">Passed to Zonos Order Update and Landed Cost API.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="zonos_token">
+                <display-name xml:lang="x-default">Zonos Token</display-name>
+                <description xml:lang="x-default">Token used for Zonos Order Complete and Landed Cost API calls.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="zonos_version">
+                <display-name xml:lang="x-default">Zonos Version</display-name>
+                <description xml:lang="x-default">Version of the Zonos Landed Cost API to use.</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>2019-11-21</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="zonos">
+                <display-name xml:lang="x-default">Zonos</display-name>
+                <attribute attribute-id="zonos_enabled"/>
+                <attribute attribute-id="zonos_token"/>
+                <attribute attribute-id="zonos_secret"/>
+                <attribute attribute-id="zonos_storeId"/>
+                <attribute attribute-id="zonos_version"/>
+                <attribute attribute-id="zonos_sitekey"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

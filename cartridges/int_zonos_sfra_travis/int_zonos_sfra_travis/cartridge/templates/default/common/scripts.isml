@@ -1,0 +1,8 @@
+<script>//common/scripts.isml</script>
+<script defer type="text/javascript" src="${URLUtils.staticURL('/js/main.js')}"></script>
+<isif condition="${'zonos_enabled' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.zonos_enabled}">
+    <script defer type="text/javascript" src="${URLUtils.staticURL('/js/zonos.js')}"></script>
+</isif>
+<isloop items="${ require('*/cartridge/scripts/assets.js').scripts }" var="script">
+    <script defer type="text/javascript" src="${script}"></script>
+</isloop>

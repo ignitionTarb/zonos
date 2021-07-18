@@ -1,0 +1,12 @@
+{
+	"hooks": [
+		{
+			"name": "dw.order.calculateShipping",
+			"script": "./hooks/zonos/zonoshooks.js"
+		},
+		{
+			"name": "dw.order.calculateTax",
+			"script": "./hooks/zonos/zonoshooks.js"
+		}
+	]
+}

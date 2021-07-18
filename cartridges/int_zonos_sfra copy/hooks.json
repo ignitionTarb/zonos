@@ -1,0 +1,12 @@
+{
+	"hooks": [
+        {
+            "name": "dw.ocapi.shop.order.afterPATCH",
+            "script": "./cartridge/scripts/hooks/zonos/tracking.js"
+        },
+        {
+			"name": "dw.order.calculateTax",
+			"script": "./cartridge/scripts/hooks/zonos/zonoshooks.js"
+		}
+	]
+}

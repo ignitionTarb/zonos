@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DigitalServer</name>
+	<comment></comment>
+	<projects>
+		<project>app_storefront_base</project>
+		<project>bm_app_storefront_base</project>
+		<project>modules</project>
+		<project>int_zonos_sfra</project>
+		<project>int_zonos_sfra_2</project>
+		<project>int_zonos_sfra_travis</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.demandware.studio.server.uploadBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.demandware.studio.server.serverProjectNature</nature>
+	</natures>
+</projectDescription>
